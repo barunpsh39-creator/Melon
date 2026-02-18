@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melon 스타일 플레이리스트</title>
+  <style>
+    :root {
+      --melon-green: #00cd3c;
+      --melon-dark: #1f1f1f;
+      --melon-light: #f7f8fa;
+      --text-main: #222;
+      --text-sub: #666;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      color: var(--text-main);
+      background: var(--melon-light);
+    }
+
+    .header {
+      background: #fff;
+      border-bottom: 1px solid #e5e8eb;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--melon-dark);
+    }
+
+    .logo {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--melon-green);
+    }
+
+    .search {
+      width: min(460px, 55vw);
+      border: 1px solid #d7dce1;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 24px auto;
+      padding: 0 16px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+    }
+
+    .track {
+      display: grid;
+      grid-template-columns: 40px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 6px;
+      border-bottom: 1px solid #eef1f4;
+    }
+
+    .track:last-child { border-bottom: 0; }
+
+    .rank {
+      font-weight: 700;
+      color: var(--melon-green);
+      text-align: center;
+    }
+
+    .meta {
+      line-height: 1.4;
+    }
+
+    .title {
+      font-weight: 700;
+    }
+
+    .artist {
+      color: var(--text-sub);
+      font-size: 0.9rem;
+    }
+
+    .play-btn {
+      border: 0;
+      background: var(--melon-green);
+      color: white;
+      border-radius: 999px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .play-btn:hover { filter: brightness(0.95); }
+
+    footer {
+      text-align: center;
+      color: var(--text-sub);
+      font-size: 0.85rem;
+      padding: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><div class="logo" aria-hidden="true"></div>Melon Mock</div>
+    <input class="search" type="search" placeholder="곡명, 아티스트 검색" />
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>TOP 5</h2>
+      <div class="track">
+        <div class="rank">1</div>
+        <div class="meta"><div class="title">Supernova</div><div class="artist">aespa</div></div>
+        <button class="play-btn">재생</button>
+      </div>
+      <div class="track">
+        <div class="rank">2</div>
+        <div class="meta"><div class="title">How Sweet</div><div class="artist">NewJeans</div></div>
+        <button class="play-btn">재생</button>
+      </div>
+      <div class="track">
+        <div class="rank">3</div>
+        <div class="meta"><div class="title">밤양갱</div><div class="artist">비비 (BIBI)</div></div>
+        <button class="play-btn">재생</button>
+      </div>
+      <div class="track">
+        <div class="rank">4</div>
+        <div class="meta"><div class="title">Magnetic</div><div class="artist">ILLIT</div></div>
+        <button class="play-btn">재생</button>
+      </div>
+      <div class="track">
+        <div class="rank">5</div>
+        <div class="meta"><div class="title">한 페이지가 될 수 있게</div><div class="artist">DAY6</div></div>
+        <button class="play-btn">재생</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>이 페이지는 예시용 Melon 스타일 HTML 목업입니다.</footer>
+</body>
+</html>
